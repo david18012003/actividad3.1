@@ -14,7 +14,9 @@ export const validar = async (req, res) => {
         if(rows.length>0){
             let token = jwt.sign({rows}, process.env.AUT_SECRET, {expiresIn:process.env.AUT_EXPIRE})
 
-            return res.status(200).json({ 'user':rows,'token':token})
+           
+
+            return res.status(200).json(token)
         }else{
             return res.status(404).json({'status': 404, 'message': 'Usuario no autorizado'})
         }

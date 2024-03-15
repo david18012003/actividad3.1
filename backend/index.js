@@ -39,6 +39,8 @@ servidor.get('/document', (req, res) => {
     res.render('document.ejs')
 })
 
+
+
 //listen 
 servidor.listen(3000, () => {
     console.log('Servidor rodando na porta 3000')
